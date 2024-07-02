@@ -2,12 +2,4 @@
 <p> Details: <%= @task.details %> </p>
 <p> Completed: <%= @task.completed %> </p>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.number_field :completed %>
-  <%= f.submit %>
-<% end %>
+<%= render 'form', task: @task %>
